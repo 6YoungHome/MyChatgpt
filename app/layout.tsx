@@ -7,6 +7,7 @@ import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getServerSideConfig } from "./config/server";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from 'next/script';
 import { Analytics } from "@vercel/analytics/react"
 const serverConfig = getServerSideConfig();
 
@@ -40,9 +41,9 @@ export default function RootLayout({
         <meta name="config" content={JSON.stringify(getClientConfig())} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <script src="/serviceWorkerRegister.js" defer></script>
-        <script id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-        <script>{`LA.init({id:"3J5xtv68WA3RMnVz",ck:"3J5xtv68WA3RMnVz"})`}</script>
+        <Script src="/serviceWorkerRegister.js" defer></Script>
+        <Script id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></Script>
+        <Script strategy="afterInteractive">{`LA.init({id:"3J5xtv68WA3RMnVz",ck:"3J5xtv68WA3RMnVz"})`}</Script>
       </head>
       <body>
         {children}
