@@ -42,7 +42,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="manifest" href="/site.webmanifest"></link>
         <Script src="/serviceWorkerRegister.js" defer></Script>
-        <Script id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></Script>
+        <Script id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js" strategy="beforeInteractive"></Script>
         <Script strategy="beforeInteractive" id="LA_INIT">{`LA.init({id:"3J5xtv68WA3RMnVz",ck:"3J5xtv68WA3RMnVz"})`}</Script>
       </head>
       <body>
