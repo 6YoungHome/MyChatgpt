@@ -41,7 +41,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
-        <script charSet="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+        <script id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
         <script>{`LA.init({id:"3J5xtv68WA3RMnVz",ck:"3J5xtv68WA3RMnVz"})`}</script>
       </head>
       <body>
