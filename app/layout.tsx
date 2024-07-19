@@ -7,6 +7,7 @@ import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { getServerSideConfig } from "./config/server";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react"
 const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
         <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-        <script>LA.init({id:"3J5xtv68WA3RMnVz",ck:"3J5xtv68WA3RMnVz"})</script>
+        <script>{`LA.init({id:"3J5xtv68WA3RMnVz",ck:"3J5xtv68WA3RMnVz"})`}</script>
       </head>
       <body>
         {children}
@@ -55,6 +56,7 @@ export default function RootLayout({
             <GoogleTagManager gtmId={serverConfig.gtmId} />
           </>
         )}
+        <Analytics />
       </body>
     </html>
   );
