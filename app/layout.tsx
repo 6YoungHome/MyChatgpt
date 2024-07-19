@@ -43,7 +43,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest"></link>
         <Script src="/serviceWorkerRegister.js" defer></Script>
         <Script id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></Script>
-        <Script strategy="afterInteractive">{`LA.init({id:"3J5xtv68WA3RMnVz",ck:"3J5xtv68WA3RMnVz"})`}</Script>
+        <Script strategy="afterInteractive" id="LA_INIT">{`LA.init({id:"3J5xtv68WA3RMnVz",ck:"3J5xtv68WA3RMnVz"})`}</Script>
       </head>
       <body>
         {children}
